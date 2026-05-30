@@ -171,7 +171,77 @@ textarea { min-height: 120px; resize: vertical; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 700px) {
-  section { padding: 3.5rem 0; }
-  .nav-links { gap: 1.2rem; }
-  .nav-links a { font-size: 0.72rem; }
+  /* Layout */
+  section { padding: 3rem 0; }
+  .container { padding: 0 1.25rem; }
+
+  /* Nav */
+  .nav-inner { height: 54px; }
+  .nav-links { gap: 0.9rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.05em; }
+
+  /* Typography */
+  h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+  h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .lead { font-size: 1rem; }
+
+  /* Buttons — full width on mobile */
+  .btn { width: 100%; justify-content: center; }
+
+  /* Cards */
+  .card { padding: 1.25rem; }
+
+  /* About section two-column — collapse */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* CTA strip — stack */
+  .cta-strip {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Form grids — single column */
+  div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  /* Footer — stack */
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  footer nav { flex-wrap: wrap; gap: 1rem; }
+
+  /* Calendly — full width */
+  .calendly-inline-widget {
+    min-width: 0 !important;
+    width: 100% !important;
+    height: 600px !important;
+  }
+
+  /* Consulting methods grid — single column */
+  .methods-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* All auto-fit grids — single column on phones */
+  div[style*="minmax(260px"] { grid-template-columns: 1fr !important; }
+  div[style*="minmax(280px"] { grid-template-columns: 1fr !important; }
+  div[style*="minmax(240px"] { grid-template-columns: 1fr !important; }
+  div[style*="minmax(220px"] { grid-template-columns: 1fr !important; }
+  div[style*="minmax(180px"] { grid-template-columns: repeat(2, 1fr) !important; }
 }
+
+/* Slightly larger phones: allow 2-column rate cards */
+@media (min-width: 480px) and (max-width: 700px) {
+  div[style*="minmax(240px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
