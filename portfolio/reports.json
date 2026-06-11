@@ -1,0 +1,142 @@
+{
+  "reports": [
+    {
+      "id": "owiwisc",
+      "title": "Wisconsin OWI Racial Disparities Analysis",
+      "short_finding": "Black defendants in Wisconsin OWI cases received significantly longer jail sentences than white defendants with equivalent prior records, a disparity that persists after controlling for age, prior convictions, and county fixed effects.",
+      "domains": [
+        "Criminal justice"
+      ],
+      "methods": [
+        "OLS",
+        "Logit / Probit",
+        "Panel data",
+        "Descriptive"
+      ],
+      "data_sources": [
+        "WCLD",
+        "Wisconsin Circuit Court"
+      ],
+      "date": "2026-06",
+      "figure": "owiwisc.png",
+      "pdf": null,
+      "github": "https://github.com/dedwar65/Consulting/tree/main/OWIWisc",
+      "status": "complete"
+    },
+    {
+      "id": "ercotsb3",
+      "title": "Texas SB 3 / ERCOT Analysis",
+      "short_finding": "Texas power plants subject to SB 3 weatherization mandates showed significant increases in cold-weather capacity factors after Uri, suggesting regulatory compliance meaningfully improved grid reliability.",
+      "domains": [
+        "Energy markets"
+      ],
+      "methods": [
+        "Panel data",
+        "Difference-in-differences",
+        "Event study"
+      ],
+      "data_sources": [
+        "ERCOT"
+      ],
+      "date": "2026-06",
+      "figure": "ercotsb3.png",
+      "pdf": null,
+      "github": "https://github.com/dedwar65/Consulting/tree/main/ERCOTSB3",
+      "status": "complete"
+    },
+    {
+      "id": "texasadoptaca",
+      "title": "Texas Medicaid Non-Expansion Analysis",
+      "short_finding": "Texas's continued non-expansion of Medicaid is associated with persistently lower insurance coverage and higher cost-access barriers among low-income adults compared to matched expansion states, with effects concentrated in the coverage gap population.",
+      "domains": [
+        "Health policy"
+      ],
+      "methods": [
+        "Difference-in-differences",
+        "Event study",
+        "Panel data"
+      ],
+      "data_sources": [
+        "BRFSS",
+        "ACS",
+        "IPUMS",
+        "Census"
+      ],
+      "date": "2026-06",
+      "figure": "texasadoptaca.png",
+      "pdf": null,
+      "github": "https://github.com/dedwar65/Consulting/tree/main/TexasAdoptACA",
+      "status": "complete"
+    },
+    {
+      "id": "ercotretail",
+      "title": "ERCOT Retail Electricity Market Analysis",
+      "short_finding": "Residential electricity demand in ERCOT is price-inelastic, with retail competition correlated with price dispersion across REPs; IV estimates confirm a negative demand response to price that survives instrumentation for wholesale cost pass-through.",
+      "domains": [
+        "Energy markets"
+      ],
+      "methods": [
+        "IV / 2SLS",
+        "Demand estimation",
+        "Descriptive"
+      ],
+      "data_sources": [
+        "EIA-861",
+        "ERCOT",
+        "PUCT",
+        "FRED"
+      ],
+      "date": "2026-06",
+      "figure": "ercotretail.png",
+      "pdf": null,
+      "github": "https://github.com/dedwar65/Consulting/tree/main/ERCOTRetail",
+      "status": "complete"
+    },
+    {
+      "id": "berylestdamages",
+      "title": "Hurricane Beryl / CenterPoint Consumer-Harm Analysis",
+      "short_finding": "Hurricane Beryl caused outages disproportionately concentrated in lower-income Harris County zip codes, with median restoration times exceeding five days in the most-affected areas — a pattern inconsistent with purely storm-severity-driven damage.",
+      "domains": [
+        "Litigation support",
+        "Energy markets"
+      ],
+      "methods": [
+        "Descriptive",
+        "OLS"
+      ],
+      "data_sources": [
+        "ACS",
+        "ERCOT",
+        "PUCT",
+        "NOAA"
+      ],
+      "date": "2026-06",
+      "figure": "berylestdamages.png",
+      "pdf": null,
+      "github": "https://github.com/dedwar65/Consulting/tree/main/BerylEstDamages",
+      "status": "complete"
+    },
+    {
+      "id": "dojconst",
+      "title": "DOJConst / Constellation-Calpine Merger Analysis",
+      "short_finding": "Proposed consolidation among Texas electricity generation owners would push post-merger HHI above DOJ thresholds in multiple capacity segments, with simulated market share shifts suggesting meaningful harm to wholesale price competition.",
+      "domains": [
+        "Antitrust",
+        "Energy markets"
+      ],
+      "methods": [
+        "Descriptive",
+        "Demand estimation"
+      ],
+      "data_sources": [
+        "EIA860",
+        "ERCOT"
+      ],
+      "date": "2026-06",
+      "figure": "dojconst.png",
+      "pdf": null,
+      "github": "https://github.com/dedwar65/Consulting/tree/main/DOJConst",
+      "status": "complete"
+    }
+  ]
+}
