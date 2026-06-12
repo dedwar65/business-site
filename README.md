@@ -109,4 +109,4 @@ The footer links to `decory@decoryedwards.com`. To activate this address:
 2. **Service agreement template** — one-page contract with all required clauses (see `Tutoring/Plan/02-tutoring-business-plan.md`). Sign via Google eSignature (included in Workspace).
 3. **Background check** — Checkr.com, ~$30 one-time. Do this before the first student session.
 4. **Calendly → Stripe connection** — in Calendly settings, connect Stripe so payment is collected at booking.
-5. **Per-student Dropbox folders** — create one per student. Share Zoom recording link there after each session.
+5. **Per-student Dropbox folders** — create one per student for sharing materials and session notes.
