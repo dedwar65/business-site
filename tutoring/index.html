@@ -178,7 +178,7 @@
       <div style="display:flex; flex-direction:column; gap:1rem;">
         <div class="step-num">1</div>
         <h3 style="font-size:1.1rem;">Book &amp; complete intake</h3>
-        <p style="font-size:0.9rem;">Choose a session type, pick a time, and pay securely. You'll receive a short intake form to help me prepare.</p>
+        <p style="font-size:0.9rem;">Book a trial or free consultation, pick a time, and pay securely for your trial. You'll receive a short intake form to help me prepare.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:1rem;">
         <div class="step-num">2</div>
@@ -206,8 +206,9 @@
     <h2 style="margin-bottom:0.75rem;">Session rates</h2>
     <div class="divider"></div>
     <p style="font-size:0.88rem; color:var(--ink2); margin-bottom:2rem;">
-      Have a quick question before booking? <strong>Free 15-minute consultations</strong> are available —
-      email <a href="mailto:decory@decoryedwards.com" style="color:var(--gold);">decory@decoryedwards.com</a> to schedule one.
+      New to tutoring here? Start with a <strong>trial session</strong> or a
+      <strong>free 15-minute consultation</strong> below. Ongoing rates are listed for reference —
+      returning clients receive a private booking link by email after enrollment.
     </p>
     <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:1.5rem; margin-top:1rem;">
 
@@ -216,6 +217,7 @@
         <p style="font-size:2rem; font-family:var(--serif); color:var(--ink); margin-bottom:0.5rem;">$<span style="color:var(--gold);">25</span></p>
         <p style="font-size:0.88rem;">45 minutes · Any subject</p>
         <p style="font-size:0.88rem; margin-top:0.75rem;">A full working session — send materials ahead and I'll come prepared. A great way to get started before committing to regular sessions.</p>
+        <a href="#book" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:0.75rem;">Book trial →</a>
       </div>
 
       <div class="card" style="border-top: 3px solid var(--gold);">
@@ -297,16 +299,30 @@
     <span class="eyebrow">Scheduling</span>
     <h2 style="margin-bottom:0.75rem;">Book a session</h2>
     <div class="divider"></div>
-    <p style="margin-bottom:2rem; max-width:500px;">
-      Select a session type, pick a time, and pay securely. You'll receive a meeting link immediately.
+    <p style="margin-bottom:1rem; max-width:560px;">
+      <strong>New clients</strong> — pick a trial session or free consultation, choose a time, and pay securely
+      (trial only). You'll receive a meeting link immediately.
     </p>
-    <!-- Replace YOUR_CALENDLY_URL with your actual Calendly link -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/edwardsyroced"
-      style="min-width:320px; height:700px; border-radius:var(--radius); overflow:hidden;"></div>
+    <p style="margin-bottom:2rem; max-width:560px; font-size:0.9rem; color:var(--ink2);">
+      <strong>Returning clients</strong> — use the private booking link in your email after your agreement is signed.
+      Ongoing session rates are listed above.
+    </p>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+      <a href="https://calendly.com/edwardsyroced/30min"
+         class="btn btn-primary"
+         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/edwardsyroced/30min'}); return false;">
+        Trial session — $25 →
+      </a>
+      <a href="https://calendly.com/edwardsyroced/free-15-min-consultation"
+         class="btn btn-outline"
+         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/edwardsyroced/free-15-min-consultation'}); return false;">
+        Free 15-min consultation →
+      </a>
+    </div>
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--ink2);">
-      Prefer to reach out first? Email <a href="mailto:decory@decoryedwards.com" style="color:var(--gold);">decory@decoryedwards.com</a>
-      or use the form below.
+    <p style="font-size:0.85rem; color:var(--ink2);">
+      Questions first? Email <a href="mailto:decory@decoryedwards.com" style="color:var(--gold);">decory@decoryedwards.com</a>
+      or use the <a href="#contact" style="color:var(--gold);">contact form</a> below.
     </p>
   </div>
 </section>
