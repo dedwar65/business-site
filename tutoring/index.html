@@ -333,22 +333,105 @@
     <span class="eyebrow">What students say</span>
     <h2 style="margin-bottom:0.75rem;">Student reviews</h2>
     <div class="divider"></div>
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; margin-top:2rem;">
-      <div class="card" style="border-top:3px solid var(--gold);">
-        <p style="font-size:0.95rem; font-style:italic; margin-bottom:1rem; color:var(--ink);">"Decory completely turned things around for me when I was struggling with college Linear Algebra. He has a great way of breaking down tough, confusing math concepts into simple, clear steps. Thanks to his patience and encouraging style, I went from being completely overwhelmed to feeling genuinely confident in my skills."</p>
-        <p style="font-size:0.82rem; font-weight:600; color:var(--ink2);">— Aseante Ard, Linear Algebra · 2021</p>
-      </div>
-      <div class="card" style="border-top:3px solid var(--gold);">
-        <p style="font-size:0.95rem; font-style:italic; margin-bottom:1rem; color:var(--ink);">"Decory is so thorough and patient. For an arduous course like MBA Economics, he managed to explain appropriate and  practical applications for the formulas to reinforce my understanding. Decory diagnosed my learning style as visual, so he adjusted his teaching style by writing out equations in granular detail. He facilitated a learning space that empowered me to ask questions if ever felt unsure."</p>
-        <p style="font-size:0.82rem; font-weight:600; color:var(--ink2);">— Sade Butt, MBA Economics · 2024</p>
-      </div>
-      <div class="card" style="border-top:3px solid var(--gold);">
-        <p style="font-size:0.95rem; font-style:italic; margin-bottom:1rem; color:var(--ink);">"Testimonial will appear here."</p>
-        <p style="font-size:0.82rem; font-weight:600; color:var(--ink2);">— Student name, subject · Year</p>
-      </div>
+
+    <!-- Carousel wrapper -->
+    <div id="reviews-carousel" style="position:relative; margin-top:2rem;">
+      <div id="reviews-track" style="display:flex; gap:1.5rem; overflow:hidden;"></div>
+
+      <!-- Nav dots -->
+      <div id="reviews-dots" style="display:flex; justify-content:center; gap:0.5rem; margin-top:1.25rem;"></div>
+
+      <!-- Prev / Next arrows (hidden when only 1 card shows) -->
+      <button id="reviews-prev" aria-label="Previous review"
+        style="position:absolute; top:50%; left:-1.5rem; transform:translateY(-50%);
+               background:var(--gold); border:none; color:#fff; width:2rem; height:2rem;
+               border-radius:50%; cursor:pointer; font-size:1rem; display:none;">&#8249;</button>
+      <button id="reviews-next" aria-label="Next review"
+        style="position:absolute; top:50%; right:-1.5rem; transform:translateY(-50%);
+               background:var(--gold); border:none; color:#fff; width:2rem; height:2rem;
+               border-radius:50%; cursor:pointer; font-size:1rem; display:none;">&#8250;</button>
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  const REVIEWS_URL = "reviews.json";
+  let reviews = [];
+  let current = 0;
+  let perPage = 1;
+
+  function cardsPerPage() {
+    return window.innerWidth >= 768 ? (window.innerWidth >= 1100 ? 3 : 2) : 1;
+  }
+
+  function buildCard(r) {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.style.cssText = "border-top:3px solid var(--gold); flex:0 0 auto; box-sizing:border-box;";
+    card.innerHTML =
+      `<p style="font-size:0.95rem;font-style:italic;margin-bottom:1rem;color:var(--ink);">&#8220;${r.review}&#8221;</p>` +
+      `<p style="font-size:0.82rem;font-weight:600;color:var(--ink2);">&#8212; ${r.name}, ${r.subject} &middot; ${r.year}</p>`;
+    return card;
+  }
+
+  function render() {
+    perPage = cardsPerPage();
+    const track = document.getElementById("reviews-track");
+    const dots  = document.getElementById("reviews-dots");
+    const prev  = document.getElementById("reviews-prev");
+    const next  = document.getElementById("reviews-next");
+
+    const pages = Math.ceil(reviews.length / perPage);
+    if (current >= pages) current = pages - 1;
+
+    // Cards
+    track.innerHTML = "";
+    const cardW = `calc((100% - ${(perPage - 1) * 1.5}rem) / ${perPage})`;
+    const slice  = reviews.slice(current * perPage, current * perPage + perPage);
+    slice.forEach(r => {
+      const c = buildCard(r);
+      c.style.width = cardW;
+      track.appendChild(c);
+    });
+
+    // Dots
+    dots.innerHTML = "";
+    if (pages > 1) {
+      for (let i = 0; i < pages; i++) {
+        const d = document.createElement("span");
+        d.style.cssText = `width:0.55rem;height:0.55rem;border-radius:50%;display:inline-block;cursor:pointer;
+          background:${i === current ? "var(--gold)" : "var(--ink2)"};opacity:${i === current ? 1 : 0.35};`;
+        d.addEventListener("click", () => { current = i; render(); });
+        dots.appendChild(d);
+      }
+    }
+
+    // Arrows
+    const showArrows = pages > 1;
+    prev.style.display = showArrows ? "block" : "none";
+    next.style.display = showArrows ? "block" : "none";
+    prev.onclick = () => { current = (current - 1 + pages) % pages; render(); };
+    next.onclick = () => { current = (current + 1) % pages; render(); };
+  }
+
+  fetch(REVIEWS_URL)
+    .then(r => r.json())
+    .then(data => {
+      reviews = data.filter(r => r.consent);
+      if (!reviews.length) return;
+      render();
+      window.addEventListener("resize", render);
+    })
+    .catch(() => {
+      // Fallback: show static placeholder if fetch fails
+      const track = document.getElementById("reviews-track");
+      track.innerHTML = `<div class="card" style="border-top:3px solid var(--gold);">
+        <p style="font-size:0.95rem;font-style:italic;color:var(--ink);">Reviews loading...</p>
+      </div>`;
+    });
+})();
+</script>
 
 <!-- LEAVE A REVIEW -->
 <section id="review" style="background:var(--bg2);">
