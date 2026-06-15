@@ -26,7 +26,7 @@
     {
       "id": "ercotsb3",
       "title": "Texas SB 3 / ERCOT Analysis",
-      "short_finding": "Texas power plants subject to SB 3 weatherization mandates showed significant increases in cold-weather capacity factors after Uri, suggesting regulatory compliance meaningfully improved grid reliability.",
+      "short_finding": "SB 3 weatherization mandates increased generator capacity factors by 1.8 percentage points relative to neighboring states, indicating improved cold-weather reliability. This gain accompanied a 1.1 cent/kWh increase in retail prices, with plant-level reliability varying substantially across generators with a high concentration of below average firms, while utility-level pricing shows energy retail companies concentrated around the average price.",
       "domains": [
         "Energy markets"
       ],
