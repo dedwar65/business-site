@@ -71,7 +71,7 @@
     {
       "id": "ercotretail",
       "title": "ERCOT Retail Electricity Market Analysis",
-      "short_finding": "Residential electricity demand in ERCOT is price-inelastic, with retail competition correlated with price dispersion across REPs; IV estimates confirm a negative demand response to price that survives instrumentation for wholesale cost pass-through.",
+      "short_finding": "Instrumenting retail price with wholesale cost-shifters (statewide and zone-footprint wholesale prices) flips the endogeneity-biased OLS sign and produces a downward-sloping demand curve with implied own-price elasticities near -3: economically meaningful but statistically insignificant, since every confidence interval brackets zero in the 98 REP-year sample. A separate pre/post regression shows TDU-level retail prices rose about 6.7 cents/kWh (roughly +55%) after Winter Storm Uri while cross-REP dispersion was unchanged, consistent with wholesale cost pass-through.",
       "domains": [
         "Energy markets"
       ],
