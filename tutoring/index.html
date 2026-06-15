@@ -249,8 +249,9 @@
         <h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Group SAT / PSAT Prep</h3>
         <p style="font-size:2rem; font-family:var(--serif); color:var(--ink);
            margin-bottom:0.5rem;">$<span style="color:var(--gold);">499</span>/student</p>
-        <p style="font-size:0.88rem;">6 weeks · 3–6 students · Launching summer 2026</p>
-        <a href="#contact" class="btn btn-primary"
+        <p style="font-size:0.88rem;">6 weeks · 3–6 students · Waitlist only</p>
+        <p style="font-size:0.88rem; margin-top:0.75rem;">No payment is due to join the waitlist. I will contact interested families once a cohort is ready.</p>
+        <a href="#group-waitlist" class="btn btn-primary"
            style="width:100%; justify-content:center; margin-top:0.75rem;">Join Waitlist →</a>
       </div>
 
@@ -258,8 +259,9 @@
         <h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Group AP Exam Prep</h3>
         <p style="font-size:2rem; font-family:var(--serif); color:var(--ink);
            margin-bottom:0.5rem;">$<span style="color:var(--gold);">499</span>/student</p>
-        <p style="font-size:0.88rem;">6 weeks · 3–6 students · Launching summer 2026</p>
-        <a href="#contact" class="btn btn-primary"
+        <p style="font-size:0.88rem;">6 weeks · 3–6 students · Waitlist only</p>
+        <p style="font-size:0.88rem; margin-top:0.75rem;">No payment is due to join the waitlist. I will contact interested families once a cohort is ready.</p>
+        <a href="#group-waitlist" class="btn btn-primary"
            style="width:100%; justify-content:center; margin-top:0.75rem;">Join Waitlist →</a>
       </div>
 
@@ -271,8 +273,8 @@
 
     </div>
     <p style="margin-top:1.5rem; font-size:0.88rem; color:var(--ink2);">
-      Payment is collected at booking. Cancellations require 24 hours notice. No-shows
-      are non-refundable. See the <a href="#" style="color:var(--gold);">service agreement</a> for full terms.
+      Trial and private sessions are paid at booking. Group courses begin as a no-payment waitlist;
+      payment and contracts are sent only after a cohort is ready.
     </p>
   </div>
 </section>
@@ -464,6 +466,48 @@
       </div>
       <input type="hidden" name="_subject" value="New student review — decoryedwards.com" />
       <button type="submit" class="btn btn-primary" style="width:100%;">Submit review →</button>
+    </form>
+  </div>
+</section>
+
+<!-- GROUP WAITLIST -->
+<section id="group-waitlist" style="background:var(--bg2);">
+  <div class="container" style="max-width:620px;">
+    <span class="eyebrow">Group Prep</span>
+    <h2 style="margin-bottom:0.75rem;">Join the group course waitlist</h2>
+    <div class="divider"></div>
+    <p style="margin-bottom:1rem;">
+      Group courses run when there are enough students for a cohort. Joining the waitlist is free and does not reserve a paid seat.
+    </p>
+    <p style="font-size:0.9rem; color:var(--ink2); margin-bottom:2rem;">
+      Once a cohort is viable, I will send the proposed schedule, agreement packet, and payment/enrollment next steps.
+    </p>
+    <form action="https://formspree.io/f/xaqkaeng" method="POST">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+        <div class="form-group">
+          <label for="group-name">Parent / student name</label>
+          <input type="text" id="group-name" name="name" required placeholder="Jane Smith" />
+        </div>
+        <div class="form-group">
+          <label for="group-email">Email address</label>
+          <input type="email" id="group-email" name="email" required placeholder="jane@example.com" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="group-program">Program</label>
+        <select id="group-program" name="subject_area" required>
+          <option value="">Select one...</option>
+          <option>Group SAT / PSAT Prep (waitlist)</option>
+          <option>Group AP Exam Prep (waitlist)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="group-message">Student goals / target test date</label>
+        <textarea id="group-message" name="message" required placeholder="Tell me the target exam date, grade level, and anything useful to know."></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="New group tutoring waitlist inquiry - decoryedwards.com" />
+      <input type="hidden" name="inquiry_type" value="Group waitlist" />
+      <button type="submit" class="btn btn-primary" style="width:100%;">Join waitlist →</button>
     </form>
   </div>
 </section>
