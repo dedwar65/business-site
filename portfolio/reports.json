@@ -3,7 +3,7 @@
     {
       "id": "owiwisc",
       "title": "Wisconsin OWI Racial Disparities Analysis",
-      "short_finding": "Black defendants in Wisconsin OWI cases received significantly longer jail sentences than white defendants with equivalent prior records, a disparity that persists after controlling for age, prior convictions, and county fixed effects.",
+      "short_finding": "Black defendants receive roughly 7 additional jail days and substantially higher 180-day recidivism, signaling harsher penalties. However, race estimates are sensitive to specification and flip sign once prior convictions are controlled, while the legal drinking age (21) is associated with 27 additional jail days—suggesting age markers for behavioral severity operate more powerfully than race in sentencing decisions.",
       "domains": [
         "Criminal justice"
       ],
