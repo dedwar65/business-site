@@ -47,7 +47,7 @@
     {
       "id": "texasadoptaca",
       "title": "Texas Medicaid Non-Expansion Analysis",
-      "short_finding": "Texas's continued non-expansion of Medicaid is associated with persistently lower insurance coverage and higher cost-access barriers among low-income adults compared to matched expansion states, with effects concentrated in the coverage gap population.",
+      "short_finding": "Event-study DiD estimates find no statistically or economically significant relative change in insurance coverage or health outcomes for low-income Texans after the April 2023 Medicaid unwinding — suggesting Texas's gap population was not clearly left worse off on these margins relative to expansion-state neighbors in Arkansas, Louisiana, and New Mexico. The one statistically significant result is a 1.8-percentage-point widening of cost barriers to care (p < 0.05): financial access deteriorated even where headline enrollment held. The insurance DiD (+7.4 pp) is actually positive — the gap narrowed, not widened — consistent with the unwinding having less bite than non-expansion alone might predict. Together, the results indicate that, despite Texas's structural coverage-gap disadvantage, the end of continuous enrollment did not measurably widen coverage or health gaps further, though the cost channel is a real and detectable pressure point.",
       "domains": [
         "Health policy"
       ],
